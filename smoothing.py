@@ -63,6 +63,7 @@ def interpolation_smoothing(samples,l):
 
     return interpolated
 
+
 def add_k_smoothing(samples,k):
 
     return (samples + k)/(samples.sum() + k*samples.shape[0])

@@ -17,12 +17,20 @@ def generate_p_star(N,a=2,normalized=False,symmetric=True):
 
         X = np.random.zipf(a=a, size=int(N*N)).reshape(N,N)
 
-    X = X + np.abs(np.random.normal(loc=0,scale=1,size=int(N*N)).reshape(int(N),int(N))) * 0.0001
+    p_zipf_unnorm = lambda k: k**(-a)
+    p_star = np.zeros([N, N])
+    for i in range(N):
+      for j in range(N):
+        p_star[i,j] = p_zipf_unnorm(X[i,j])
 
-    if normalized == True:
-        return X / np.sum(X)
+    noise = np.abs(np.random.normal(loc=0,scale=1,size=int(N*N)).reshape(int(N),int(N))) * 0.0001
+    p_orig = p_star
+    p_star = p_star + noise
 
-    return X
+    if normalized == True: 
+        return p_star / np.sum(p_star), p_orig, noise, X
+
+    return X, noise
 
 def sample_from_2d(p,N,return_p_hat=True):
 
