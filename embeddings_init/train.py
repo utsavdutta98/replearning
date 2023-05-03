@@ -94,6 +94,14 @@ class ConsolidatedModelClass:
         if self.scheduler_flag:
             self.scheduler.step()
 
+    def train(self):
+
+        self.model.train()
+
+    def eval(self):
+
+        self.model.eval()
+
 """
 Get Model
 

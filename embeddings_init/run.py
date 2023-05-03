@@ -50,9 +50,13 @@ if __name__ == "__main__":
 
     for epoch in tqdm(range(args.num_epochs)):
 
+        BaseModel
+
         for batch in tqdm(train_loader):
 
             tokenized_batch = tokenizer(batch['text'],return_tensors='pt',padding=True,max_length=1024)
 
             BaseModel.step(tokenized_batch)
             BaseModelWithEmbeddings.step(tokenized_batch)
+
+        for batch in tq
