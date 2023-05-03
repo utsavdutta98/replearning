@@ -76,3 +76,27 @@ def get_pmi_matrix(p,ppmi=True):
 def convert_to_ppmi(pmi):
 
     return np.maximum(pmi,0)
+
+def power_method(A,num_iters=100):
+
+    # Starting vector
+    b = np.random.rand(A.shape[0])
+
+    # Power iteration
+    for i in range(num_iters):
+        
+        # Project
+        bnew = A @ b
+        
+        # Normalize
+        b = bnew / np.linalg.norm(bnew, ord=2)
+
+        eval = (b.T @ A @ b) / (b.T @ b)
+
+    return eval,b
+
+def sort_spectra(eigs, evecs):
+    idx = eigs.argsort()[::-1]   
+    eigs = eigs[idx]
+    evecs = evecs[:, idx]
+    return eigs, evecs
