@@ -27,7 +27,8 @@ if __name__ == "__main__":
     # Get tokenizer
     tokenizer = get_tokenizer(args.model_name)
 
-    print(args)
+    # Get device
+    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
     # Build Consolidate Model Classes
     BaseModel = ConsolidatedModelClass(
@@ -36,7 +37,8 @@ if __name__ == "__main__":
         optimizer='AdamW',
         lr=args.lr,
         tokenizer=tokenizer,
-        scheduler=args.scheduler
+        scheduler=args.scheduler,
+        device=device
     )
 
     BaseModelWithEmbeddings = ConsolidatedModelClass(
@@ -45,18 +47,38 @@ if __name__ == "__main__":
         optimizer='AdamW',
         lr=args.lr,
         tokenizer=tokenizer,
-        scheduler=args.scheduler
+        scheduler=args.scheduler,
+        device=device
     )
 
     for epoch in tqdm(range(args.num_epochs)):
 
-        BaseModel
+        BaseModel.train()
+        BaseModelWithEmbeddings.train()
 
         for batch in tqdm(train_loader):
 
             tokenized_batch = tokenizer(batch['text'],return_tensors='pt',padding=True,max_length=1024)
 
-            BaseModel.step(tokenized_batch)
-            BaseModelWithEmbeddings.step(tokenized_batch)
+            train_base_loss = BaseModel.step(tokenized_batch)
+            train_base_with_embeddings_loss = BaseModelWithEmbeddings.step(tokenized_batch)
 
-        for batch in tq
+        BaseModel.eval()
+        BaseModelWithEmbeddings.eval()
+
+        train_val_losses = []
+        train_val_with_embeddings_losses = []
+
+        for batch in tqdm(test_loader):
+
+            with torch.no_grad():
+                tokenized_batch = tokenizer(batch['text'],return_tensors='pt',padding=True,max_length=1024)
+
+                train_val_loss = BaseModel.step(tokenized_batch)
+                train_val_with_embeddings_loss = BaseModelWithEmbeddings.step(tokenized_batch)
+
+                train_val_losses.append(train_val_loss.item())
+                train_val_with_embeddings_losses.append(train_val_with_embeddings_loss.item())
+
+        print("Average Val Loss Base", train_val_losses.mean())
+        print("Average Val Loss Base With Embeddings", train_val_with_embeddings_losses.mean())

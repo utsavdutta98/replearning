@@ -10,7 +10,8 @@ class ConsolidatedModelClass:
                 optimizer,
                 lr,
                 tokenizer,
-                scheduler):
+                scheduler,
+                device):
 
         # Get model, optimizer, scheduler
         self.model = self.build_model(model_name,use_pretrained_embeddings)
@@ -21,6 +22,8 @@ class ConsolidatedModelClass:
             self.scheduler = self.build_scheduler()
         
         self.tokenizer = tokenizer
+        
+        self.device = device
 
     def build_model(self,model_name,use_pretrained_embeddings=False):
 
@@ -47,6 +50,8 @@ class ConsolidatedModelClass:
         else:
             raise ValueError("Model name must be in ['GPT2']")
         
+        model = model.to(self.device)
+
         return model
 
     def build_optimizer(self,optimizer,lr):
@@ -75,12 +80,15 @@ class ConsolidatedModelClass:
     def __call__(self, tokenized_batch):
         
         out = self.model(
-            input_ids=tokenized_batch['input_ids'],
-            attention_mask=tokenized_batch['attention_mask'],
-            labels=tokenized_batch['input_ids'])
+            input_ids=tokenized_batch['input_ids'].to(self.device),
+            attention_mask=tokenized_batch['attention_mask'].to(self.device),
+            labels=tokenized_batch['input_ids'].to(self.device))
         
         return out
 
+    """
+    Performs zero_grad, loss backprop and step for optimizer + scheduler
+    """
     def step(self,tokenized_batch):
 
         self.optimizer.zero_grad()
@@ -93,6 +101,8 @@ class ConsolidatedModelClass:
 
         if self.scheduler_flag:
             self.scheduler.step()
+
+        return loss
 
     def train(self):
 
