@@ -1,0 +1,14 @@
+Found cached dataset yelp_review_full (/home/utsav/.cache/huggingface/datasets/yelp_review_full/yelp_review_full/1.0.0/e8e18e19d7be9e75642fc66b198abadb116f73599ec89a69ba5dd8d1e57ba0bf)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 118.94it/s]
+Loading cached shuffled indices for dataset at /home/utsav/.cache/huggingface/datasets/yelp_review_full/yelp_review_full/1.0.0/e8e18e19d7be9e75642fc66b198abadb116f73599ec89a69ba5dd8d1e57ba0bf/cache-b0c3fdb0a0b3a7bb.arrow
+Loading cached shuffled indices for dataset at /home/utsav/.cache/huggingface/datasets/yelp_review_full/yelp_review_full/1.0.0/e8e18e19d7be9e75642fc66b198abadb116f73599ec89a69ba5dd8d1e57ba0bf/cache-a0f1bfa2f136ab06.arrow
+Traceback (most recent call last):
+  File "/home/utsav/representation_learning/embeddings_init/run.py", line 65, in <module>
+    BaseModel = ConsolidatedModelClass(
+  File "/home/utsav/representation_learning/embeddings_init/model.py", line 23, in __init__
+    self.model = self.build_model(model_name,num_layers,use_pretrained_embeddings)
+TypeError: build_model() missing 1 required positional argument: 'freeze_word_embeddings'
+Converting dataset format to torch for split : train
+Converting dataset format to torch for split : test
+Adding pad_token to tokenizer
+Device : cuda

@@ -1,6 +1,10 @@
 import transformers
 from datasets import load_dataset
 import wandb
+import numpy as np
+import os
+import torch
+import random
 
 import sys
 sys.set_int_max_str_digits(0)
@@ -76,3 +80,15 @@ def get_tokenizer(model_name='GPT2'):
         tokenizer.pad_token_id = tokenizer.eos_token_id
 
     return tokenizer
+
+def set_seed(seed):
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    # When running on the CuDNN backend, two further options must be set
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    # Set a fixed value for the hash seed
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    print(f"Random seed set as {seed}")

@@ -1,0 +1,75 @@
+wandb_version: 1
+
+dataset_name:
+  desc: null
+  value: yelp_review_full
+model_name:
+  desc: null
+  value: GPT2
+optimizer:
+  desc: null
+  value: AdamW
+lr:
+  desc: null
+  value: 0.0003
+use_pretrained_embeddings:
+  desc: null
+  value: true
+num_epochs:
+  desc: null
+  value: 200
+scheduler:
+  desc: null
+  value: true
+tokenizer_max_length:
+  desc: null
+  value: 64
+dataset_frac:
+  desc: null
+  value: 0.2
+batch_size:
+  desc: null
+  value: 128
+num_layers:
+  desc: null
+  value: 6
+use_wandb:
+  desc: null
+  value: true
+seed:
+  desc: null
+  value: 42
+wandb_project_name:
+  desc: null
+  value: gptembeddings
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.16
+    cli_version: 0.15.1
+    framework: huggingface
+    huggingface_version: 4.24.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1683218266.484358
+    t:
+      1:
+      - 1
+      - 11
+      - 49
+      - 51
+      - 55
+      2:
+      - 1
+      - 11
+      - 49
+      - 51
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.9.16
+      5: 0.15.1
+      6: 4.24.0
+      8:
+      - 5

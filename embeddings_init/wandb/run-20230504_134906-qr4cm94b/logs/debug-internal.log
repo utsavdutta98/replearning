@@ -1,0 +1,1125 @@
+2023-05-04 13:49:06,566 INFO    StreamThr :899555 [internal.py:wandb_internal():86] W&B internal server running at pid: 899555, started at: 2023-05-04 13:49:06.565704
+2023-05-04 13:49:06,570 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status
+2023-05-04 13:49:06,576 INFO    WriterThread:899555 [datastore.py:open_for_write():85] open: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/run-qr4cm94b.wandb
+2023-05-04 13:49:06,577 DEBUG   SenderThread:899555 [sender.py:send():375] send: header
+2023-05-04 13:49:06,612 DEBUG   SenderThread:899555 [sender.py:send():375] send: run
+2023-05-04 13:49:07,202 INFO    SenderThread:899555 [dir_watcher.py:__init__():219] watching files in: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files
+2023-05-04 13:49:07,202 INFO    SenderThread:899555 [sender.py:_start_run_threads():1124] run started: qr4cm94b with start time 1683222546.562999
+2023-05-04 13:49:07,203 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 13:49:07,203 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 13:49:07,209 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: check_version
+2023-05-04 13:49:07,210 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: check_version
+2023-05-04 13:49:07,316 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: run_start
+2023-05-04 13:49:07,324 DEBUG   HandlerThread:899555 [system_info.py:__init__():31] System info init
+2023-05-04 13:49:07,325 DEBUG   HandlerThread:899555 [system_info.py:__init__():46] System info init done
+2023-05-04 13:49:07,325 INFO    HandlerThread:899555 [system_monitor.py:start():181] Starting system monitor
+2023-05-04 13:49:07,325 INFO    SystemMonitor:899555 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-04 13:49:07,326 INFO    HandlerThread:899555 [system_monitor.py:probe():201] Collecting system info
+2023-05-04 13:49:07,327 INFO    SystemMonitor:899555 [interfaces.py:start():190] Started cpu monitoring
+2023-05-04 13:49:07,328 INFO    SystemMonitor:899555 [interfaces.py:start():190] Started disk monitoring
+2023-05-04 13:49:07,330 INFO    SystemMonitor:899555 [interfaces.py:start():190] Started gpu monitoring
+2023-05-04 13:49:07,332 INFO    SystemMonitor:899555 [interfaces.py:start():190] Started memory monitoring
+2023-05-04 13:49:07,334 INFO    SystemMonitor:899555 [interfaces.py:start():190] Started network monitoring
+2023-05-04 13:49:07,422 DEBUG   HandlerThread:899555 [system_info.py:probe():195] Probing system
+2023-05-04 13:49:07,438 DEBUG   HandlerThread:899555 [system_info.py:_probe_git():180] Probing git
+2023-05-04 13:49:07,473 DEBUG   HandlerThread:899555 [system_info.py:_probe_git():188] Probing git done
+2023-05-04 13:49:07,473 DEBUG   HandlerThread:899555 [system_info.py:probe():240] Probing system done
+2023-05-04 13:49:07,473 DEBUG   HandlerThread:899555 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-67-generic-x86_64-with-glibc2.31', 'python': '3.9.16', 'heartbeatAt': '2023-05-04T17:49:07.422536', 'startedAt': '2023-05-04T17:49:06.542226', 'docker': None, 'cuda': None, 'args': ('--dataset_frac', '0.01'), 'state': 'running', 'program': '/home/utsav/representation_learning/embeddings_init/run.py', 'codePath': 'embeddings_init/run.py', 'git': {'remote': 'https://github.com/utsavdutta98/replearning.git', 'commit': 'ae2a1f7251c4d25285a29e981c3376a43972f683'}, 'email': 'utsavdutta98@gmail.com', 'root': '/home/utsav/representation_learning', 'host': 'gautama.ml.cs.cmu.edu', 'username': 'utsav', 'executable': '/home/utsav/anaconda3/envs/replearning2/bin/python3', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2.054796874999998, 'min': 800.0, 'max': 3200.0}, 'cpu_freq_per_core': [{'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 0.799, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}, {'current': 0.862, 'min': 800.0, 'max': 3200.0}, {'current': 2.1, 'min': 800.0, 'max': 3200.0}], 'disk': {'total': 37.248558044433594, 'used': 5.564960479736328}, 'gpu': 'Quadro RTX 8000', 'gpu_count': 2, 'gpu_devices': [{'name': 'Quadro RTX 8000', 'memory_total': 50962169856}, {'name': 'Quadro RTX 8000', 'memory_total': 50958893056}], 'memory': {'total': 376.60555267333984}}
+2023-05-04 13:49:07,474 INFO    HandlerThread:899555 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-04 13:49:07,474 INFO    HandlerThread:899555 [system_monitor.py:probe():214] Publishing system info
+2023-05-04 13:49:07,474 DEBUG   HandlerThread:899555 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-04 13:49:07,475 DEBUG   HandlerThread:899555 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-04 13:49:07,475 DEBUG   HandlerThread:899555 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-04 13:49:08,208 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_created():278] file/dir created: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/requirements.txt
+2023-05-04 13:49:08,209 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_created():278] file/dir created: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 13:49:08,210 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_created():278] file/dir created: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/conda-environment.yaml
+2023-05-04 13:49:11,071 DEBUG   HandlerThread:899555 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-04 13:49:11,074 INFO    HandlerThread:899555 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-04 13:49:11,081 DEBUG   SenderThread:899555 [sender.py:send():375] send: files
+2023-05-04 13:49:11,082 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-04 13:49:11,098 DEBUG   SenderThread:899555 [sender.py:send():375] send: telemetry
+2023-05-04 13:49:11,098 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:49:11,099 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:49:11,210 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/conda-environment.yaml
+2023-05-04 13:49:11,211 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_created():278] file/dir created: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-metadata.json
+2023-05-04 13:49:11,515 INFO    wandb-upload_0:899555 [upload_job.py:push():137] Uploaded file /tmp/tmpihpc4ztxwandb/silghuke-wandb-metadata.json
+2023-05-04 13:49:11,737 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:12,211 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_created():278] file/dir created: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:14,213 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:17,015 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:22,017 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:26,095 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:49:26,096 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:49:27,786 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:28,221 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:30,222 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:32,223 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:33,460 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:34,225 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:36,226 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:38,227 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:38,546 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:39,228 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/config.yaml
+2023-05-04 13:49:40,229 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:41,096 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:49:41,098 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:49:42,231 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:44,232 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:44,347 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:46,234 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:48,235 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:49,361 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:50,236 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:52,237 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:54,238 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:54,415 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:49:56,096 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:49:56,097 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:49:56,239 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:58,241 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:49:59,470 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:00,242 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:02,243 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:04,245 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:04,584 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:06,246 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:07,334 DEBUG   SystemMonitor:899555 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-04 13:50:07,340 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:50:08,247 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:09,712 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:10,248 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:11,096 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:50:11,098 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:50:12,249 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:14,250 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:14,757 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:16,252 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:18,253 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:19,878 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:20,254 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:22,255 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:24,257 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:25,010 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:26,097 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:50:26,098 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:50:26,258 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:28,259 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:30,078 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:30,260 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:32,262 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:34,263 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:35,174 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:36,264 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:37,343 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:50:38,266 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:40,255 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:40,266 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:41,097 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:50:41,098 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:50:42,268 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:44,269 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:45,305 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:46,270 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:48,272 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:50,273 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:50,458 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:52,274 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:54,275 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:55,808 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:50:56,098 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:50:56,100 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:50:56,277 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:50:56,550 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:50:56,552 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:50:56,553 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:50:58,278 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:00,279 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:00,926 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:02,280 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:04,281 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:05,949 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:06,282 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:07,346 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:51:08,284 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:10,287 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:10,997 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:11,104 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:51:11,105 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:51:12,288 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:14,289 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:16,063 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:16,290 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:18,291 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:20,293 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:21,089 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:22,294 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:24,295 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:26,103 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:51:26,105 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:26,105 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:51:26,296 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:28,297 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:30,299 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:31,248 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:32,300 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:34,301 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:36,279 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:36,303 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:37,350 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:51:38,304 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:40,306 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:41,104 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:51:41,105 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:51:42,052 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:42,307 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:44,308 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:46,309 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:47,098 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:48,310 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:50,312 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:52,174 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:52,313 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:54,314 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:56,104 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:51:56,106 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:51:56,315 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:51:57,181 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:51:58,316 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:00,317 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:02,319 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:02,441 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:04,320 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:06,321 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:07,353 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:52:07,566 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:08,322 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:10,323 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:11,105 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:52:11,106 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:52:12,324 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:12,603 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:14,325 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:16,326 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:17,636 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:18,327 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:20,328 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:22,329 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:23,094 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:24,329 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:25,302 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:52:25,305 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:52:25,306 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:52:25,308 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 13:52:25,309 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 13:52:25,311 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 13:52:25,330 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 13:52:26,104 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:52:26,106 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:52:26,331 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:28,678 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:29,333 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:31,334 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:33,335 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:33,739 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:35,336 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:37,337 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:37,357 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:52:38,792 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:39,339 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:41,105 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:52:41,107 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:52:41,340 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:43,341 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:43,873 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:45,343 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:47,344 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:48,983 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:49,345 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:51,346 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:53,348 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:54,013 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:55,349 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:56,105 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:52:56,106 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:52:57,351 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:52:59,068 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:52:59,352 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:01,353 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:03,355 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:04,094 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:05,356 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:07,361 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:53:07,363 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:09,102 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:09,365 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:11,105 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:53:11,106 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:53:11,367 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:13,368 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:14,181 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:15,369 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:17,371 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:19,186 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:19,372 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:21,373 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:23,374 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:24,305 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:25,376 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:26,105 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:53:26,106 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:53:27,377 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:29,355 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:29,378 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:31,379 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:33,381 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:34,426 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:35,382 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:37,363 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:53:37,383 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:39,384 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:39,502 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:41,105 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:53:41,106 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:53:41,386 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:43,387 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:44,593 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:45,388 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:47,389 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:49,391 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:49,720 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:51,392 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:53,393 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:54,006 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:53:54,007 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:53:54,009 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:53:54,009 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 13:53:54,011 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 13:53:54,012 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 13:53:54,394 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 13:53:55,025 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:53:55,394 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:56,106 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:53:56,107 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:53:56,395 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:57,396 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:53:59,397 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:00,056 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:01,398 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:03,400 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:05,110 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:05,401 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:07,368 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:54:07,402 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:09,403 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:10,269 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:11,106 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:54:11,107 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:54:11,405 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:13,406 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:15,311 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:15,408 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:17,409 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:19,410 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:20,417 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:21,411 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:23,413 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:25,414 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:25,431 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:26,107 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:54:26,107 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:54:27,415 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:29,416 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:30,470 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:31,418 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:33,419 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:35,421 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:35,535 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:37,371 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:54:37,422 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:39,423 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:40,663 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:41,107 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:54:41,107 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:54:41,425 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:43,427 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:45,428 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:46,345 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:47,429 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:49,430 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:51,432 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:51,478 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:53,433 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:55,434 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:56,107 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:54:56,108 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:54:56,558 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:54:57,436 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:54:59,437 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:01,438 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:01,578 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:03,440 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:05,441 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:06,656 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:07,375 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:55:07,442 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:09,444 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:11,107 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:55:11,108 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:55:11,445 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:11,719 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:13,446 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:15,448 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:16,785 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:17,449 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:19,450 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:21,451 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:22,055 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:22,737 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:55:22,739 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:55:22,740 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:55:22,740 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 13:55:22,742 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 13:55:22,743 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 13:55:23,452 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 13:55:23,453 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:24,453 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:25,454 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:26,109 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:55:26,110 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:55:27,178 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:27,455 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:29,456 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:31,458 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:32,830 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:33,459 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:35,460 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:37,378 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:55:37,462 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:37,933 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:39,463 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:41,109 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:55:41,109 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:55:41,464 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:42,970 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:43,465 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:45,466 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:47,468 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:48,072 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:49,469 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:51,470 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:53,183 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:53,471 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:55,473 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:56,110 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:55:56,110 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:55:57,474 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:55:58,340 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:55:59,475 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:01,476 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:03,360 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:03,477 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:05,478 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:07,381 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:56:07,479 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:08,383 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:09,481 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:11,110 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:56:11,111 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:56:11,482 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:13,483 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:13,577 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:15,484 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:17,485 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:18,633 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:19,487 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:21,488 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:23,489 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:23,723 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:25,490 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:26,110 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:56:26,111 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:56:27,491 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:28,817 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:29,493 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:31,494 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:33,495 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:33,923 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:35,496 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:37,384 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:56:37,498 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:38,983 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:39,499 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:41,110 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:56:41,111 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:56:41,500 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:43,501 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:44,077 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:45,503 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:47,504 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:49,505 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:49,524 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:51,506 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:51,701 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:56:51,702 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:56:51,703 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:56:51,704 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 13:56:51,705 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 13:56:51,706 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 13:56:52,507 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 13:56:52,508 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:53,508 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:55,049 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:56:55,509 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:56,110 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:56:56,111 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:56:57,510 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:56:59,511 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:00,082 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:01,513 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:03,514 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:05,112 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:05,515 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:07,387 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:57:07,517 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:09,518 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:10,169 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:11,111 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:57:11,111 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:57:11,519 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:13,521 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:15,186 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:15,522 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:17,523 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:19,525 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:20,254 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:21,525 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:23,527 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:25,301 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:25,528 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:26,111 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:57:26,114 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:57:27,530 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:29,531 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:31,297 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:31,532 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:33,533 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:35,535 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:36,316 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:37,390 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:57:37,536 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:39,538 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:41,111 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:57:41,112 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:57:41,539 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:42,109 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:43,540 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:45,542 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:47,169 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:47,543 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:49,544 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:51,546 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:52,245 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:53,547 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:55,548 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:56,112 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:57:56,113 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:57:57,298 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:57:57,549 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:57:59,551 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:01,552 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:02,440 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:03,553 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:05,554 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:07,394 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:58:07,507 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:07,556 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:09,556 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:11,112 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:58:11,113 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:58:11,558 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:12,587 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:13,559 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:15,560 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:17,562 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:18,031 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:19,563 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:20,275 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:58:20,277 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:58:20,278 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:58:20,279 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 13:58:20,281 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 13:58:20,282 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 13:58:20,564 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 13:58:21,564 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:22,565 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:23,565 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:23,675 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:25,567 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:26,111 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:58:26,112 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:58:27,568 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:28,740 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:29,569 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:31,570 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:33,571 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:33,773 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:35,573 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:37,396 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:58:37,574 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:38,846 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:39,575 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:41,114 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:58:41,115 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:58:41,576 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:43,578 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:43,873 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:45,579 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:47,580 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:48,924 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:49,581 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:51,582 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:53,583 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:53,967 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:55,585 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:56,114 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:58:56,115 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:58:57,586 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:58:59,015 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:58:59,587 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:01,588 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:03,589 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:04,055 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:05,590 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:07,397 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:59:07,592 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:09,138 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:09,593 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:11,114 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:59:11,115 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:59:11,594 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:13,595 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:14,220 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:15,597 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:17,598 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:19,323 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:19,599 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:21,600 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:23,602 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:25,318 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:25,603 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:26,115 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:59:26,116 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:59:27,604 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:29,605 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:30,445 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:31,606 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:33,607 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:35,555 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:35,609 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:36,567 WARNING FileStreamThread:899555 [file_stream.py:request_with_retry():670] requests_with_retry encountered retryable exception: 502 Server Error: Bad Gateway for url: https://api.wandb.ai/files/utsavdutta98/gptembeddings/qr4cm94b/file_stream. func: <bound method Session.post of <requests.sessions.Session object at 0x7f70242e9040>>, args: ('https://api.wandb.ai/files/utsavdutta98/gptembeddings/qr4cm94b/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 18, 'content': ['{"system.disk": 15.8, "system.network.sent": 5991704.93, "system.network.recv": 5899509.93, "system.proc.memory.availableMB": 351631.12, "system.memory": 8.8, "system.proc.memory.rssMB": 3013.83, "system.proc.memory.percent": 0.78, "system.cpu": 1.56, "system.cpu.0.cpu_percent": 1.97, "system.cpu.1.cpu_percent": 1.33, "system.cpu.2.cpu_percent": 1.03, "system.cpu.3.cpu_percent": 2.01, "system.cpu.4.cpu_percent": 0.93, "system.cpu.5.cpu_percent": 1.71, "system.cpu.6.cpu_percent": 1.0, "system.cpu.7.cpu_percent": 0.83, "system.cpu.8.cpu_percent": 1.41, "system.cpu.9.cpu_percent": 1.1, "system.cpu.10.cpu_percent": 2.77, "system.cpu.11.cpu_percent": 0.9, "system.cpu.12.cpu_percent": 3.93, "system.cpu.13.cpu_percent": 1.11, "system.cpu.14.cpu_percent": 0.77, "system.cpu.15.cpu_percent": 1.59, "system.cpu.16.cpu_percent": 59.27, "system.cpu.17.cpu_percent": 2.46, "system.cpu.18.cpu_percent": 5.03, "system.cpu.19.cpu_percent": 2.81, "system.cpu.20.cpu_percent": 2.54, "system.cpu.21.cpu_percent": 1.37, "system.cpu.22.cpu_percent": 1.4, "system.cpu.23.cpu_percent": 2.1, "system.cpu.24.cpu_percent": 2.47, "system.cpu.25.cpu_percent": 1.77, "system.cpu.26.cpu_percent": 1.23, "system.cpu.27.cpu_percent": 1.21, "system.cpu.28.cpu_percent": 1.43, "system.cpu.29.cpu_percent": 1.77, "system.cpu.30.cpu_percent": 1.57, "system.cpu.31.cpu_percent": 1.63, "system.cpu.32.cpu_percent": 1.17, "system.cpu.33.cpu_percent": 1.47, "system.cpu.34.cpu_percent": 2.67, "system.cpu.35.cpu_percent": 1.7, "system.cpu.36.cpu_percent": 9.61, "system.cpu.37.cpu_percent": 1.37, "system.cpu.38.cpu_percent": 1.23, "system.cpu.39.cpu_percent": 3.4, "system.cpu.40.cpu_percent": 3.1, "system.cpu.41.cpu_percent": 1.81, "system.cpu.42.cpu_percent": 5.13, "system.cpu.43.cpu_percent": 0.77, "system.cpu.44.cpu_percent": 1.53, "system.cpu.45.cpu_percent": 1.0, "system.cpu.46.cpu_percent": 0.73, "system.cpu.47.cpu_percent": 0.93, "system.cpu.48.cpu_percent": 0.7, "system.cpu.49.cpu_percent": 0.83, "system.cpu.50.cpu_percent": 3.67, "system.cpu.51.cpu_percent": 4.3, "system.cpu.52.cpu_percent": 1.93, "system.cpu.53.cpu_percent": 2.67, "system.cpu.54.cpu_percent": 1.2, "system.cpu.55.cpu_percent": 1.54, "system.cpu.56.cpu_percent": 0.93, "system.cpu.57.cpu_percent": 1.13, "system.cpu.58.cpu_percent": 1.07, "system.cpu.59.cpu_percent": 41.79, "system.cpu.60.cpu_percent": 1.2, "system.cpu.61.cpu_percent": 1.36, "system.cpu.62.cpu_percent": 1.57, "system.cpu.63.cpu_percent": 1.3, "system.proc.cpu.threads": 51, "system.gpu.0.memoryAllocated": 46.07, "system.gpu.process.0.memoryAllocated": 46.07, "system.gpu.1.memoryAllocated": 0.08, "system.gpu.0.memory": 36.2, "system.gpu.process.0.memory": 36.2, "system.gpu.1.memory": 0.0, "system.gpu.0.gpu": 75.67, "system.gpu.process.0.gpu": 75.67, "system.gpu.1.gpu": 0.0, "system.gpu.0.temp": 80.8, "system.gpu.process.0.temp": 80.8, "system.gpu.1.temp": 56.0, "system.gpu.0.powerWatts": 220.17, "system.gpu.process.0.powerWatts": 220.17, "system.gpu.1.powerWatts": 37.42, "system.gpu.0.powerPercent": 84.68, "system.gpu.process.0.powerPercent": 84.68, "system.gpu.1.powerPercent": 14.39, "_wandb": true, "_timestamp": 1683223147.395737, "_runtime": 600.832738}']}, 'output.log': {'offset': 51, 'content': ['ERROR 2023-05-04T17:59:27.520190  76%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                  | 39/51 [01:05<00:20,  1.68s/it]\n']}}, 'dropped': 0}}
+2023-05-04 13:59:37,401 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 13:59:37,610 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:39,611 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:40,681 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:41,115 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:59:41,116 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:59:41,612 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:43,614 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:45,615 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:45,760 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:47,616 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:49,061 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:59:49,062 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:59:49,064 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 13:59:49,064 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 13:59:49,066 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 13:59:49,067 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 13:59:49,617 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 13:59:49,618 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:50,618 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:51,618 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:51,732 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:53,620 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:55,620 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:56,116 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 13:59:56,117 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 13:59:57,178 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 13:59:57,622 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 13:59:59,623 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:01,624 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:02,527 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:03,625 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:05,627 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:07,404 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:00:07,595 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:08,629 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:10,630 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:11,115 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:00:11,117 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:00:12,632 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:12,711 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:14,633 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:16,634 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:17,768 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:18,636 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:20,637 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:22,639 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:22,814 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:24,640 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:26,117 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:00:26,118 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:00:26,641 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:28,012 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:28,642 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:30,644 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:32,645 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:33,125 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:34,647 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:36,648 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:37,407 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:00:38,188 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:38,650 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:40,651 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:41,117 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:00:41,118 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:00:42,652 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:43,336 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:44,654 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:46,655 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:48,446 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:48,656 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:50,657 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:52,659 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:53,475 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:54,660 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:56,117 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:00:56,118 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:00:56,662 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:00:58,558 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:00:58,663 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:00,664 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:02,665 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:03,610 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:04,666 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:06,668 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:07,411 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:01:08,611 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:08,669 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:10,670 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:11,117 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:01:11,118 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:01:12,671 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:13,672 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:14,674 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:16,678 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:17,950 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:01:17,952 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:01:17,953 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:01:17,954 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 14:01:17,955 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:01:17,956 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:01:18,679 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 14:01:18,679 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:18,958 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:19,679 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:20,680 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:22,681 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:24,617 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:24,683 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:26,117 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:01:26,118 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:01:26,684 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:28,685 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:30,615 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:30,686 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:32,687 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:34,688 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:35,712 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:36,690 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:37,414 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:01:38,691 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:40,692 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:41,117 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:01:41,118 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:41,119 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:01:42,693 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:44,694 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:46,418 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:46,696 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:48,697 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:50,698 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:51,449 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:52,699 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:54,701 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:56,118 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:01:56,119 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:01:56,509 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:01:56,702 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:01:58,703 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:00,704 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:01,629 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:02,706 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:04,707 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:06,683 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:06,708 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:07,418 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:02:08,709 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:10,711 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:11,118 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:02:11,119 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:02:11,786 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:12,712 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:14,713 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:16,714 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:16,901 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:18,715 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:20,717 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:21,985 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:22,718 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:24,719 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:26,118 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:02:26,119 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:02:26,720 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:27,082 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:28,721 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:30,723 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:32,117 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:32,724 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:34,725 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:36,726 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:37,179 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:37,421 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:02:38,727 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:40,729 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:41,118 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:02:41,120 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:02:42,315 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:42,730 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:44,731 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:46,591 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:02:46,593 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:02:46,594 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:02:46,594 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 14:02:46,596 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:02:46,597 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:02:46,732 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 14:02:46,733 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:47,598 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:48,734 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:49,734 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:50,735 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:52,682 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:52,736 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:54,737 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:56,119 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:02:56,120 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:02:56,738 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:02:57,830 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:02:58,740 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:00,741 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:02,742 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:03,472 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:04,743 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:06,745 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:07,424 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:03:08,536 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:08,746 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:10,747 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:11,119 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:03:11,120 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:03:12,748 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:13,601 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:14,749 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:16,751 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:18,628 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:18,752 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:20,753 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:22,754 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:23,649 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:24,756 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:26,119 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:03:26,120 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:03:26,757 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:28,688 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:28,758 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:30,759 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:32,761 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:33,756 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:34,762 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:36,763 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:37,427 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:03:38,764 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:38,818 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:40,765 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:41,119 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:03:41,120 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:03:42,767 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:43,880 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:44,768 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:46,769 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:48,770 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:48,954 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:50,771 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:52,773 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:54,069 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:03:54,774 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:56,119 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:03:56,121 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:03:56,775 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:58,776 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:03:59,116 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:00,778 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:02,779 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:04,251 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:04,780 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:06,781 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:07,431 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:04:08,782 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:09,296 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:10,783 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:11,120 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:04:11,121 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:04:12,785 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:14,567 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:14,786 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:15,267 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:04:15,269 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:04:15,270 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:04:15,271 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 14:04:15,272 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:04:15,274 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:04:15,786 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 14:04:16,787 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:17,788 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:18,788 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:19,685 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:20,790 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:22,791 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:24,770 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:24,792 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:26,120 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:04:26,121 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:04:26,793 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:28,795 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:29,805 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:30,796 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:32,797 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:34,798 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:34,936 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:36,799 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:37,434 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:04:38,800 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:40,037 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:40,801 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:41,121 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:04:41,122 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:04:42,803 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:44,804 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:45,143 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:46,805 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:48,807 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:50,205 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:50,808 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:52,809 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:54,810 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:55,330 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:04:56,121 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:04:56,122 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:04:56,811 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:04:58,813 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:00,814 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:01,002 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:02,816 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:04,819 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:06,125 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:06,820 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:07,438 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:05:08,821 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:10,823 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:11,121 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:05:11,122 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:05:11,198 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:12,824 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:14,825 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:16,320 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:16,826 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:18,828 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:20,829 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:21,332 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:22,830 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:24,831 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:26,121 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:05:26,122 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:05:26,404 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:26,833 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:28,834 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:30,835 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:31,464 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:32,836 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:34,838 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:36,619 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:36,839 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:37,441 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:05:38,840 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:40,841 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:41,121 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:05:41,122 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:05:42,247 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:42,843 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:44,635 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:05:44,637 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:05:44,638 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:05:44,639 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 14:05:44,641 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:05:44,642 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:05:44,844 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 14:05:44,844 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:45,844 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:46,845 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:47,396 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:48,846 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:50,848 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:52,578 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:52,849 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:54,850 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:56,123 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:05:56,124 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:05:56,852 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:05:57,674 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:05:58,853 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:06:00,854 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:06:02,855 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:06:02,881 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:06:02,999 DEBUG   SenderThread:899555 [sender.py:send():375] send: exit
+2023-05-04 14:06:02,999 INFO    SenderThread:899555 [sender.py:send_exit():598] handling exit code: 255
+2023-05-04 14:06:03,000 INFO    SenderThread:899555 [sender.py:send_exit():600] handling runtime: 1015
+2023-05-04 14:06:03,001 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:06:03,001 INFO    SenderThread:899555 [sender.py:send_exit():606] send defer
+2023-05-04 14:06:03,002 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,002 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-04 14:06:03,002 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,003 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-04 14:06:03,003 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 1
+2023-05-04 14:06:03,003 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,003 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-04 14:06:03,003 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,003 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-04 14:06:03,004 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 2
+2023-05-04 14:06:03,004 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,004 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-04 14:06:03,004 INFO    HandlerThread:899555 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-04 14:06:03,005 INFO    HandlerThread:899555 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-04 14:06:03,005 INFO    HandlerThread:899555 [interfaces.py:finish():202] Joined disk monitor
+2023-05-04 14:06:03,006 DEBUG   SystemMonitor:899555 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-04 14:06:03,006 DEBUG   SystemMonitor:899555 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-04 14:06:03,200 INFO    HandlerThread:899555 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-04 14:06:03,201 INFO    HandlerThread:899555 [interfaces.py:finish():202] Joined memory monitor
+2023-05-04 14:06:03,201 INFO    HandlerThread:899555 [interfaces.py:finish():202] Joined network monitor
+2023-05-04 14:06:03,203 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,203 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-04 14:06:03,203 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 3
+2023-05-04 14:06:03,204 DEBUG   SenderThread:899555 [sender.py:send():375] send: stats
+2023-05-04 14:06:03,204 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,206 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-04 14:06:03,208 DEBUG   SenderThread:899555 [sender.py:send():375] send: history
+2023-05-04 14:06:03,208 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:06:03,209 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:06:03,210 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,210 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-04 14:06:03,210 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 4
+2023-05-04 14:06:03,210 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,211 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-04 14:06:03,211 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,212 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-04 14:06:03,212 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 5
+2023-05-04 14:06:03,212 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,212 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-04 14:06:03,213 DEBUG   SenderThread:899555 [sender.py:send():375] send: summary
+2023-05-04 14:06:03,217 INFO    SenderThread:899555 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:06:03,218 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,218 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-04 14:06:03,218 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 6
+2023-05-04 14:06:03,218 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,218 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-04 14:06:03,219 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,219 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-04 14:06:03,219 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 7
+2023-05-04 14:06:03,220 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:06:03,220 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:03,221 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-04 14:06:03,221 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:03,221 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-04 14:06:03,856 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 14:06:03,999 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:06:04,857 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:06:05,073 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 8
+2023-05-04 14:06:05,074 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:06:05,074 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:05,075 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-04 14:06:05,076 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:05,076 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-04 14:06:05,085 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 9
+2023-05-04 14:06:05,086 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:05,086 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-04 14:06:05,087 DEBUG   SenderThread:899555 [sender.py:send():375] send: artifact
+2023-05-04 14:06:05,859 INFO    Thread-12 :899555 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:06:05,867 INFO    SenderThread:899555 [sender.py:send_artifact():1474] sent artifact job-https___github.com_utsavdutta98_replearning.git_embeddings_init_run.py - {'id': 'QXJ0aWZhY3Q6NDQyMTg2NTE5', 'digest': '3b536983fe909c2230827a5e46b12cd1', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_utsavdutta98_replearning.git_embeddings_init_run.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_utsavdutta98_replearning.git_embeddings_init_run.py', 'alias': 'v2'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY2NjI2MDgz', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDQyMTg2NTE5', 'versionIndex': 2}}, 'version': 'v2'}
+2023-05-04 14:06:05,867 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:05,867 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-05-04 14:06:05,867 INFO    SenderThread:899555 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-05-04 14:06:06,860 INFO    SenderThread:899555 [dir_watcher.py:finish():395] scan: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files
+2023-05-04 14:06:06,861 INFO    SenderThread:899555 [dir_watcher.py:finish():409] scan save: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/conda-environment.yaml conda-environment.yaml
+2023-05-04 14:06:06,861 INFO    SenderThread:899555 [dir_watcher.py:finish():409] scan save: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-metadata.json wandb-metadata.json
+2023-05-04 14:06:06,861 INFO    SenderThread:899555 [dir_watcher.py:finish():409] scan save: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json wandb-summary.json
+2023-05-04 14:06:06,862 INFO    SenderThread:899555 [dir_watcher.py:finish():409] scan save: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log output.log
+2023-05-04 14:06:06,871 INFO    SenderThread:899555 [dir_watcher.py:finish():409] scan save: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/config.yaml config.yaml
+2023-05-04 14:06:06,888 INFO    SenderThread:899555 [dir_watcher.py:finish():409] scan save: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/requirements.txt requirements.txt
+2023-05-04 14:06:06,888 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 10
+2023-05-04 14:06:06,889 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:06,895 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 10
+2023-05-04 14:06:06,897 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:06,905 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-05-04 14:06:06,905 INFO    SenderThread:899555 [file_pusher.py:finish():167] shutting down file pusher
+2023-05-04 14:06:07,348 INFO    wandb-upload_1:899555 [upload_job.py:push():137] Uploaded file /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/wandb-summary.json
+2023-05-04 14:06:07,352 INFO    wandb-upload_2:899555 [upload_job.py:push():137] Uploaded file /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/output.log
+2023-05-04 14:06:07,354 INFO    wandb-upload_4:899555 [upload_job.py:push():137] Uploaded file /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/requirements.txt
+2023-05-04 14:06:07,362 INFO    wandb-upload_0:899555 [upload_job.py:push():137] Uploaded file /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/conda-environment.yaml
+2023-05-04 14:06:07,385 INFO    wandb-upload_3:899555 [upload_job.py:push():137] Uploaded file /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/files/config.yaml
+2023-05-04 14:06:07,586 INFO    Thread-11 :899555 [sender.py:transition_state():626] send defer: 11
+2023-05-04 14:06:07,587 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:07,587 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 11
+2023-05-04 14:06:07,588 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:07,588 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-05-04 14:06:07,589 INFO    SenderThread:899555 [file_pusher.py:join():172] waiting for file pusher
+2023-05-04 14:06:07,589 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 12
+2023-05-04 14:06:07,589 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:07,589 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 12
+2023-05-04 14:06:07,590 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:07,590 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-05-04 14:06:08,075 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 13
+2023-05-04 14:06:08,075 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:08,076 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 13
+2023-05-04 14:06:08,077 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:08,077 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-05-04 14:06:08,077 INFO    SenderThread:899555 [sender.py:transition_state():626] send defer: 14
+2023-05-04 14:06:08,078 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:06:08,078 INFO    HandlerThread:899555 [handler.py:handle_request_defer():170] handle defer: 14
+2023-05-04 14:06:08,079 DEBUG   SenderThread:899555 [sender.py:send():375] send: final
+2023-05-04 14:06:08,079 DEBUG   SenderThread:899555 [sender.py:send():375] send: footer
+2023-05-04 14:06:08,079 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:06:08,080 INFO    SenderThread:899555 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-05-04 14:06:08,081 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:06:08,082 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:06:08,083 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: server_info
+2023-05-04 14:06:08,084 DEBUG   SenderThread:899555 [sender.py:send_request():402] send_request: server_info
+2023-05-04 14:06:08,084 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: get_summary
+2023-05-04 14:06:08,091 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: sampled_history
+2023-05-04 14:06:08,161 INFO    MainThread:899555 [wandb_run.py:_footer_history_summary_info():3469] rendering history
+2023-05-04 14:06:08,162 INFO    MainThread:899555 [wandb_run.py:_footer_history_summary_info():3501] rendering summary
+2023-05-04 14:06:08,162 INFO    MainThread:899555 [wandb_run.py:_footer_sync_info():3428] logging synced files
+2023-05-04 14:06:08,163 DEBUG   HandlerThread:899555 [handler.py:handle_request():144] handle_request: shutdown
+2023-05-04 14:06:08,164 INFO    HandlerThread:899555 [handler.py:finish():845] shutting down handler
+2023-05-04 14:06:09,084 INFO    WriterThread:899555 [datastore.py:close():298] close: /home/utsav/representation_learning/embeddings_init/wandb/run-20230504_134906-qr4cm94b/run-qr4cm94b.wandb
+2023-05-04 14:06:09,160 INFO    SenderThread:899555 [sender.py:finish():1550] shutting down sender
+2023-05-04 14:06:09,161 INFO    SenderThread:899555 [file_pusher.py:finish():167] shutting down file pusher
+2023-05-04 14:06:09,161 INFO    SenderThread:899555 [file_pusher.py:join():172] waiting for file pusher

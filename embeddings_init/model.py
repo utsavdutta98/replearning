@@ -9,6 +9,7 @@ class ConsolidatedModelClass:
                 model_name,
                 num_layers,
                 use_pretrained_embeddings,
+                freeze_pretrained_embeddings,
                 optimizer,
                 lr,
                 tokenizer,
@@ -19,7 +20,7 @@ class ConsolidatedModelClass:
         # Get model, optimizer, scheduler
 
         self.device = device
-        self.model = self.build_model(model_name,num_layers,use_pretrained_embeddings)
+        self.model = self.build_model(model_name,num_layers,use_pretrained_embeddings,freeze_pretrained_embeddings)
         self.optimizer = self.build_optimizer(optimizer,lr)
 
         self.scheduler_flag = scheduler
@@ -27,7 +28,8 @@ class ConsolidatedModelClass:
             self.scheduler = self.build_scheduler()
         
         self.tokenizer = tokenizer
-        
+
+        # Resize token embeddings, in case there is a disparity with the optimizer
         self.model.resize_token_embeddings(len(self.tokenizer))
 
         assert self.model.transformer.wte.weight.shape[0] == len(self.tokenizer), "Model's embeddings should be the same as tokenizer's embeddings"
@@ -39,11 +41,11 @@ class ConsolidatedModelClass:
             'val_loss' : []
         }
 
-    def build_model(self,model_name,num_layers,use_pretrained_embeddings=False):
+    def build_model(self,model_name,num_layers,use_pretrained_embeddings,freeze_pretrained_embeddings):
 
         if model_name == 'GPT2':
 
-            from transformers import GPT2Model,GPT2LMHeadModel,GPT2Config
+            from transformers import GPT2LMHeadModel,GPT2Config
 
             configuration = GPT2Config(n_layer=num_layers)
             model = GPT2LMHeadModel(configuration)
@@ -55,6 +57,10 @@ class ConsolidatedModelClass:
 
                 # Assign pre-trained embeddings to blank model
                 model.transformer.wte = pretrained_model.transformer.wte
+
+                # Freeze pre-trained embeddings
+                if freeze_pretrained_embeddings:
+                    model.transformer.wte.requires_grad = False
         
         else:
             raise ValueError("Model name must be in ['GPT2']")

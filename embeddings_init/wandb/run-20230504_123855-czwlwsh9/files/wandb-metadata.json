@@ -1,0 +1,369 @@
+{
+    "os": "Linux-5.15.0-67-generic-x86_64-with-glibc2.31",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-05-04T16:38:56.505404",
+    "startedAt": "2023-05-04T16:38:55.870783",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/utsav/representation_learning/embeddings_init/run.py",
+    "codePath": "embeddings_init/run.py",
+    "git": {
+        "remote": "https://github.com/utsavdutta98/replearning.git",
+        "commit": "ae2a1f7251c4d25285a29e981c3376a43972f683"
+    },
+    "email": "utsavdutta98@gmail.com",
+    "root": "/home/utsav/representation_learning",
+    "host": "gautama.ml.cs.cmu.edu",
+    "username": "utsav",
+    "executable": "/home/utsav/anaconda3/envs/replearning2/bin/python3",
+    "cpu_count": 32,
+    "cpu_count_logical": 64,
+    "cpu_freq": {
+        "current": 2.0593749999999975,
+        "min": 800.0,
+        "max": 3200.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 0.804,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 1.027,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3200.0
+        }
+    ],
+    "disk": {
+        "total": 37.248558044433594,
+        "used": 5.564960479736328
+    },
+    "gpu": "Quadro RTX 8000",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "Quadro RTX 8000",
+            "memory_total": 50962169856
+        },
+        {
+            "name": "Quadro RTX 8000",
+            "memory_total": 50958893056
+        }
+    ],
+    "memory": {
+        "total": 376.60555267333984
+    }
+}

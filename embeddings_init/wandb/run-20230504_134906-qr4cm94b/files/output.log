@@ -1,0 +1,584 @@
+Found cached dataset yelp_review_full (/home/utsav/.cache/huggingface/datasets/yelp_review_full/yelp_review_full/1.0.0/e8e18e19d7be9e75642fc66b198abadb116f73599ec89a69ba5dd8d1e57ba0bf)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 114.34it/s]
+Loading cached shuffled indices for dataset at /home/utsav/.cache/huggingface/datasets/yelp_review_full/yelp_review_full/1.0.0/e8e18e19d7be9e75642fc66b198abadb116f73599ec89a69ba5dd8d1e57ba0bf/cache-b0c3fdb0a0b3a7bb.arrow
+Loading cached shuffled indices for dataset at /home/utsav/.cache/huggingface/datasets/yelp_review_full/yelp_review_full/1.0.0/e8e18e19d7be9e75642fc66b198abadb116f73599ec89a69ba5dd8d1e57ba0bf/cache-a0f1bfa2f136ab06.arrow
+Converting dataset format to torch for split : train
+Converting dataset format to torch for split : test
+Adding pad_token to tokenizer
+Device : cuda
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:26<00:00,  1.60s/it]
+
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████                                     | 3/4 [00:02<00:00,  1.31it/s]
+ model base has train loss : 10.956436811708937
+                                   and test loss : 10.967972993850708
+ model base_with_embeddings has train loss : 19.87967805301442
+                                   and test loss : 20.456351280212402
+ model base_with_frozen_embeddings has train loss : 20.06340112873152
+  0%|▋                                                                                                                                               | 1/200 [01:29<4:57:42, 89.76s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.58s/it]
+ 50%|██████████████████████████████████████████████████████████████████████████                                                                          | 2/4 [00:01<00:01,  1.30it/s]
+ model base has train loss : 10.95365400875316
+                                   and test loss : 10.962049007415771
+ model base_with_embeddings has train loss : 19.842275095920936
+                                   and test loss : 20.392136096954346
+ model base_with_frozen_embeddings has train loss : 20.03829069698558
+  1%|█▍                                                                                                                                              | 2/200 [02:58<4:54:20, 89.19s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.59s/it]
+  2%|██▏                                                                                                                                             | 3/200 [04:27<4:52:06, 88.97s/it]
+  0%|                                                                                                                                                           | 0/51 [00:00<?, ?it/s]
+ model base has train loss : 10.946094045452043
+                                   and test loss : 10.951998233795166
+ model base_with_embeddings has train loss : 19.780132069307214
+                                   and test loss : 20.302756309509277
+ model base_with_frozen_embeddings has train loss : 19.990496766333486
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.58s/it]
+  2%|██▉                                                                                                                                             | 4/200 [05:55<4:50:19, 88.87s/it]
+  0%|                                                                                                                                                           | 0/51 [00:00<?, ?it/s]
+ model base has train loss : 10.935854556513767
+                                   and test loss : 10.938010692596436
+ model base_with_embeddings has train loss : 19.69017271902047
+                                   and test loss : 20.182618141174316
+ model base_with_frozen_embeddings has train loss : 19.91591760223987
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:26<00:00,  1.58s/it]
+
+ 50%|██████████████████████████████████████████████████████████████████████████                                                                          | 2/4 [00:01<00:01,  1.34it/s]
+ model base has train loss : 10.922586347542557
+                                   and test loss : 10.919798851013184
+ model base_with_embeddings has train loss : 19.569122464049098
+                                   and test loss : 20.02216148376465
+ model base_with_frozen_embeddings has train loss : 19.8194647770302
+  2%|███▌                                                                                                                                            | 5/200 [07:24<4:48:57, 88.91s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.58s/it]
+  3%|████▎                                                                                                                                           | 6/200 [08:53<4:47:06, 88.79s/it]
+  0%|                                                                                                                                                           | 0/51 [00:00<?, ?it/s]
+ model base has train loss : 10.904775862600289
+                                   and test loss : 10.897657632827759
+ model base_with_embeddings has train loss : 19.417719298718023
+                                   and test loss : 19.823870182037354
+ model base_with_frozen_embeddings has train loss : 19.684891943838082
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.59s/it]
+  4%|█████                                                                                                                                           | 7/200 [10:22<4:45:36, 88.79s/it]
+  0%|                                                                                                                                                           | 0/51 [00:00<?, ?it/s]
+ model base has train loss : 10.883325071895824
+                                   and test loss : 10.87100338935852
+ model base_with_embeddings has train loss : 19.25094559613396
+                                   and test loss : 19.60192584991455
+ model base_with_frozen_embeddings has train loss : 19.532477584539674
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.58s/it]
+
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████                                     | 3/4 [00:02<00:00,  1.33it/s]
+ model base has train loss : 10.85795716678395
+                                   and test loss : 10.841241359710693
+ model base_with_embeddings has train loss : 19.056727128870346
+                                   and test loss : 19.380854606628418
+ model base_with_frozen_embeddings has train loss : 19.355852800257065
+  4%|█████▊                                                                                                                                          | 8/200 [11:51<4:44:13, 88.82s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.60s/it]
+
+  4%|██████▍                                                                                                                                         | 9/200 [13:19<4:42:34, 88.77s/it]
+  0%|                                                                                                                                                           | 0/51 [00:00<?, ?it/s]
+ model base has train loss : 10.831590727263807
+                                   and test loss : 10.807372808456421
+ model base_with_embeddings has train loss : 18.846992642271754
+                                   and test loss : 19.106281280517578
+ model base_with_frozen_embeddings has train loss : 19.16388930526434
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:25<00:00,  1.59s/it]
+  5%|███████▏                                                                                                                                       | 10/200 [14:48<4:41:00, 88.74s/it]
+  0%|                                                                                                                                                           | 0/51 [00:00<?, ?it/s]
+ model base has train loss : 10.798943575690775
+                                   and test loss : 10.769107341766357
+ model base_with_embeddings has train loss : 18.60271001329609
+                                   and test loss : 18.824023723602295
+ model base_with_frozen_embeddings has train loss : 18.935023401297777
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 51/51 [01:26<00:00,  1.61s/it]
+
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████                                     | 3/4 [00:02<00:00,  1.28it/s]
+ model base has train loss : 10.764100598353966
+                                   and test loss : 10.725785493850708
+ model base_with_embeddings has train loss : 18.354754541434495
+                                   and test loss : 18.489641189575195
+ model base_with_frozen_embeddings has train loss : 18.68542136398016
+  6%|███████▊                                                                                                                                       | 11/200 [16:17<4:40:07, 88.93s/it]
+
+
+
+
+
+
+
+
+  6%|███████▊                                                                                                                                       | 11/200 [16:36<4:45:17, 90.57s/it]
+Traceback (most recent call last):
+  File "/home/utsav/representation_learning/embeddings_init/run.py", line 125, in <module>
+    # ---------------------------------------------------------------------------- #
+  File "/home/utsav/representation_learning/embeddings_init/train.py", line 24, in train_models
+    loss = models[model].step(batch)
+  File "/home/utsav/representation_learning/embeddings_init/model.py", line 130, in step
+    loss.backward()
+  File "/home/utsav/anaconda3/envs/replearning2/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/utsav/anaconda3/envs/replearning2/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
