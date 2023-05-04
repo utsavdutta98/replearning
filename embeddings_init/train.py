@@ -1,161 +1,48 @@
-import transformers
-import torch
-import math
-
-class ConsolidatedModelClass:
-
-    def __init__(self,
-                model_name,
-                use_pretrained_embeddings,
-                optimizer,
-                lr,
-                tokenizer,
-                scheduler,
-                device):
-
-        # Get model, optimizer, scheduler
-        self.model = self.build_model(model_name,use_pretrained_embeddings)
-        self.optimizer = self.build_optimizer(optimizer,lr)
-
-        self.scheduler_flag = scheduler
-        if self.scheduler_flag:
-            self.scheduler = self.build_scheduler()
-        
-        self.tokenizer = tokenizer
-        
-        self.device = device
-
-    def build_model(self,model_name,use_pretrained_embeddings=False):
-
-        if model_name == 'GPT2':
-
-            from transformers import GPT2Model,GPT2LMHeadModel,GPT2Config
-
-            if use_pretrained_embeddings == False:
-                
-                configuration = GPT2Config()
-                model = GPT2LMHeadModel(configuration)
-
-            else:
-
-                configuration = GPT2Config()
-                model = GPT2LMHeadModel(configuration)
-
-                # Get pre_trained embeddings            
-                pretrained_model = GPT2LMHeadModel.from_pretrained('gpt2')
-
-                # Assign pre-trained embeddings to blank model
-                model.transformer.wte = pretrained_model.transformer.wte
-        
-        else:
-            raise ValueError("Model name must be in ['GPT2']")
-        
-        model = model.to(self.device)
-
-        return model
-
-    def build_optimizer(self,optimizer,lr):
-
-        if optimizer == 'AdamW':
-
-            optim = torch.optim.AdamW(self.model.parameters(),lr)
-
-        else:
-            raise ValueError("Optimizer must be in ['AdamW']")
-
-        return optim
-
-    def build_scheduler(self,warmup_steps=2000,total_steps=10000,max_lr=2.5e-4,initial_lr=0):
-
-        # LR scheduler from GPT2 paper (mentioned on Wikipedia)
-        lr_scheduler = torch.optim.lr_scheduler.LambdaLR(self.optimizer, 
-                    lr_lambda=lambda step: 
-                    ((max_lr) / warmup_steps) * step if step < warmup_steps 
-                    else 
-                    0.5 * (max_lr) * (1 + math.cos((step - warmup_steps) / (total_steps - warmup_steps) * math.pi))
-                    )
-        
-        return lr_scheduler
-
-    def __call__(self, tokenized_batch):
-        
-        out = self.model(
-            input_ids=tokenized_batch['input_ids'].to(self.device),
-            attention_mask=tokenized_batch['attention_mask'].to(self.device),
-            labels=tokenized_batch['input_ids'].to(self.device))
-        
-        return out
-
-    """
-    Performs zero_grad, loss backprop and step for optimizer + scheduler
-    """
-    def step(self,tokenized_batch):
-
-        self.optimizer.zero_grad()
-        
-        outputs = self.__call__(tokenized_batch)
-        loss = outputs.loss
-        loss.backward()
-
-        self.optimizer.step()
-
-        if self.scheduler_flag:
-            self.scheduler.step()
-
-        return loss
-
-    def train(self):
-
-        self.model.train()
-
-    def eval(self):
-
-        self.model.eval()
+import tqdm
+from tqdm import tqdm
+import wandb
 
 """
-Get Model
-
-If use_pretrained_embeddings is True, then extract pre-trained embeddings and overwrite word-embeddings layer
+Function to train dictionary of models and log
 """
-def get_model(model_name,use_pretrained_embeddings=False):
 
-    if model_name == 'GPT2':
+def train_models(models,train_loader,args):
 
-        from transformers import GPT2Model,GPT2LMHeadModel,GPT2Config
+    # store losses in dict
+    epoch_loss = {key:0 for key in models.keys()}
 
-        if use_pretrained_embeddings == False:
-            
-            configuration = GPT2Config()
-            model = GPT2LMHeadModel(configuration)
-        
-        else:
+    # set models to train
+    for model in models:
+        models[model].train() 
 
-            configuration = GPT2Config()
-            model = GPT2LMHeadModel(configuration)
+    # iterate over dataloader
+    for batch in tqdm(train_loader):
 
-            # Get pre_trained embeddings            
-            pretrained_model = GPT2LMHeadModel.from_pretrained('gpt2')
+        # compute loss for each model and log
+        for model in models:
 
-            # Assign pre-trained embeddings to blank model
-            model.transformer.wte = pretrained_model.transformer.wte
+            loss = models[model].step(batch)
+            epoch_loss[model] += loss.item()
 
-    else:
-        raise ValueError("Model name must be in ['GPT2']")
+    # log in central dict, with average train loss
+    for model in models:
+        models[model].losses['train_loss'].append(epoch_loss[model]/len(train_loader))
 
-    return model
+def evaluate_models(models,valid_loader,args):
 
-"""
-Get PyTorch optimizer
-"""
-def get_optimizer(model,optimizer,lr,**kwargs):
+    # store losses in dict
+    epoch_loss = {key:0 for key in models.keys()}
 
-    if optimizer == 'AdamW':
-        optimizer = torch.optim.AdamW(model.parameters(),lr=lr)
+    # set models to eval
+    for model in models:
+        models[model].eval() 
 
-    else:
-        raise ValueError("Optimizer must be in ['AdamW']")
+    for batch in tqdm(valid_loader):
 
-    return optimizer
+        for model in models:
 
-def train(model,num_epochs,optimizer):
-    return
+            loss = models[model].step(batch)
+            epoch_loss[model] += loss.item()
+
+    for model in models:
+        models[model].losses['val_loss'].append(epoch_loss[model]/len(valid_loader))
