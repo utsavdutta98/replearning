@@ -66,7 +66,7 @@ def interpolation_smoothing(samples,l):
 
 def add_k_smoothing(samples,k):
 
-    return (samples + k)/(samples.sum() + k*samples.shape[0])
+    return (samples + k)/(samples.sum() + k*samples.shape[0]**2)
 
 def kneser_ney_smoothing(samples,d=0.75):
 
