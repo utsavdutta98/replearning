@@ -6,6 +6,8 @@ import tqdm
 from tqdm import tqdm
 import wandb
 
+# git token : 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
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Inputs for running files")
