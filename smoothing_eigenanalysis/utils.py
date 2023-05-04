@@ -86,14 +86,14 @@ def power_method(A,num_iters=100):
     for i in range(num_iters):
         
         # Project
-        bnew = A @ b
+        b = A @ b
         
-        # Normalize
-        b = bnew / np.linalg.norm(bnew, ord=2)
+    # Normalize
+    b = b / np.linalg.norm(b, ord=2)
 
-        eval = (b.T @ A @ b) / (b.T @ b)
+    eval_hat = (b.T @ A @ b) / (b.T @ b)
 
-    return eval,b
+    return eval_hat, b
 
 def sort_spectra(eigs, evecs):
     idx = eigs.argsort()[::-1]   
