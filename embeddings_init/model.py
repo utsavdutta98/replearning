@@ -136,9 +136,6 @@ class ConsolidatedModelClass:
 
             self.optimizer.step()
 
-            if self.scheduler_flag:
-                self.scheduler.step()
-
         else:
             
             outputs = self.__call__(tokenized_batch)

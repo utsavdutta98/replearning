@@ -22,6 +22,10 @@ def train_models(Model,train_loader,args):
         loss = Model.step(batch)
         epoch_loss += loss.item()
 
+    # take scheduler step
+    if Model.scheduler_flag:
+        Model.scheduler.step()
+
     # log in central dict, with average train loss
     Model.losses['train_loss'].append(epoch_loss/len(train_loader))
 

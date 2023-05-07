@@ -6,6 +6,7 @@ import tqdm
 from tqdm import tqdm
 import wandb
 import os
+import copy
 
 os.environ["WANDB_SILENT"] = "true" # suppress wandb outputs
 os.environ["CUDA_VISIBLE_DEVICES"] = "1" # set CUDA to device : 1
@@ -102,6 +103,9 @@ if __name__ == "__main__":
         device=device,
     )
 
+    # ------------------------- Store initial embeddings ------------------------- #
+    init_embeddings = copy.deepcopy(Model.model.transformer.wte.weight)
+
     # ---------------------------------------------------------------------------- #
     #                                 Training loop                                #
     # ---------------------------------------------------------------------------- #
@@ -110,18 +114,27 @@ if __name__ == "__main__":
         train_models(Model,train_loader,args)
         evaluate_models(Model,test_loader,args)
 
-        # for model in models:
-
         train_loss = Model.losses['train_loss'][-1]
         val_loss = Model.losses['val_loss'][-1]
 
-        print(f"\nhas train loss : {train_loss} \n \
-                                and test loss : {val_loss}")
+        # learning rate
+        lr = Model.scheduler.get_lr()
+
+        # get norm of difference in embeddings
+        new_embeddings = Model.model.transformer.wte.weight
+        diff_embeddings = torch.norm(init_embeddings-new_embeddings).item()
+
+        # grad of embeddings
+        embeddings_gradient = torch.norm(new_embeddings.grad).item()
 
         wandb.log({
             f"train loss" : train_loss,
             f"val loss" : val_loss,
+            'learning rate' : lr,
+            "diff_embeddings":diff_embeddings,
+            "grad_embeddings":embeddings_gradient
         },
+        
         step = epoch
         )
 
