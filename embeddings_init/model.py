@@ -15,17 +15,22 @@ class ConsolidatedModelClass:
                 tokenizer,
                 scheduler,
                 args,
-                device):
+                device
+                ):
 
         # Get model, optimizer, scheduler
 
         self.device = device
-        self.model = self.build_model(model_name,num_layers,use_pretrained_embeddings,freeze_pretrained_embeddings)
+        self.model = self.build_model(model_name,
+                                      num_layers,
+                                      use_pretrained_embeddings,
+                                      freeze_pretrained_embeddings)
+
         self.optimizer = self.build_optimizer(optimizer,lr)
 
         self.scheduler_flag = scheduler
         if self.scheduler_flag:
-            self.scheduler = self.build_scheduler()
+            self.scheduler = self.build_scheduler(warmup_steps=args.warmup_steps)
         
         self.tokenizer = tokenizer
 
@@ -60,7 +65,7 @@ class ConsolidatedModelClass:
 
                 # Freeze pre-trained embeddings
                 if freeze_pretrained_embeddings:
-                    model.transformer.wte.requires_grad = False
+                    model.transformer.wte.weight.requires_grad = False
         
         else:
             raise ValueError("Model name must be in ['GPT2']")

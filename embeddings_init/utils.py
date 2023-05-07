@@ -32,7 +32,7 @@ def prepare_datasets(dataset,dataset_frac):
 
     return dataset
 
-def prepare_dataloaders(dataset,batch_size):
+def prepare_dataloaders(dataset,batch_size,num_workers):
 
     from torch.utils.data import DataLoader
 
@@ -43,13 +43,13 @@ def prepare_dataloaders(dataset,batch_size):
     for split in dataset.keys():
 
         if split == 'train':
-            train_loader = DataLoader(dataset[split], shuffle=True, batch_size=batch_size)
+            train_loader = DataLoader(dataset[split], shuffle=True, batch_size=batch_size,num_workers=num_workers)
     
         elif split == 'test':
-            test_loader = DataLoader(dataset[split], shuffle=True, batch_size=batch_size)
+            test_loader = DataLoader(dataset[split], shuffle=True, batch_size=batch_size,num_workers=num_workers)
 
         elif split == 'val':
-            test_loader = DataLoader(dataset[split], shuffle=True, batch_size=batch_size)
+            test_loader = DataLoader(dataset[split], shuffle=True, batch_size=batch_size,num_workers=num_workers)
 
         else:
             raise ValueError("Split must be in 'train', 'test', 'val' \n")
@@ -92,3 +92,11 @@ def set_seed(seed):
     # Set a fixed value for the hash seed
     os.environ["PYTHONHASHSEED"] = str(seed)
     print(f"Random seed set as {seed}")
+
+def str_to_bool(str):
+    if str == 'False':
+        return False
+    elif str == 'True':
+        return True
+    else:
+        raise ValueError("Input must be a boolean")
