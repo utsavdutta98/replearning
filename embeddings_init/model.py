@@ -7,6 +7,8 @@ import wandb
 import tqdm 
 from tqdm import tqdm
 import copy
+import accelerate
+from accelerate import Accelerator
 
 class ConsolidatedModelClass:
 
@@ -19,13 +21,11 @@ class ConsolidatedModelClass:
                 lr,
                 tokenizer,
                 scheduler,
-                args,
-                device
+                args
                 ):
 
         # Get model, optimizer, scheduler
 
-        self.device = device
         self.model = self.build_model(model_name,
                                       num_layers,
                                       use_pretrained_embeddings,
@@ -35,7 +35,9 @@ class ConsolidatedModelClass:
 
         self.scheduler_flag = scheduler
         if self.scheduler_flag:
-            self.scheduler = self.build_scheduler(warmup_steps=args.warmup_steps)
+            self.scheduler = self.build_scheduler(max_lr=lr,
+                                                  warmup_steps=args.warmup_steps,
+                                                  total_steps=args.num_epochs)
         
         self.tokenizer = tokenizer
 
@@ -51,9 +53,9 @@ class ConsolidatedModelClass:
             'val_loss' : []
         }
 
-        self.scaler = torch.cuda.amp.GradScaler()
-
         self.init_embeddings = copy.deepcopy(self.model.transformer.wte.weight)
+
+        self.accelerator = Accelerator(mixed_precision='fp16')
 
     def build_model(self,model_name,num_layers,use_pretrained_embeddings,freeze_pretrained_embeddings):
 
@@ -79,7 +81,7 @@ class ConsolidatedModelClass:
         else:
             raise ValueError("Model name must be in ['GPT2']")
         
-        model = model.to(self.device)
+        # model = model.to(self.device)
 
         return model
 
@@ -98,7 +100,7 @@ class ConsolidatedModelClass:
     """
     Build scheduler, based on original paper
     """
-    def build_scheduler(self,warmup_steps=2000,total_steps=10000,max_lr=2.5e-4,initial_lr=0):
+    def build_scheduler(self,warmup_steps,max_lr,total_steps):
 
         # LR scheduler from GPT2 paper (mentioned on Wikipedia)
         # don't ask how I got this, chatgpt generated it and I verified it works
@@ -116,10 +118,11 @@ class ConsolidatedModelClass:
     """
     def __call__(self, tokenized_batch):
         
+        # this is terrible TODO: somehow remove accelerator.device here.
         out = self.model(
-            input_ids=tokenized_batch['input_ids'].to(self.device),
-            attention_mask=tokenized_batch['attention_mask'].to(self.device),
-            labels=tokenized_batch['input_ids'].to(self.device)
+            input_ids=tokenized_batch['input_ids'].to(self.accelerator.device),
+            attention_mask=tokenized_batch['attention_mask'].to(self.accelerator.device),
+            labels=tokenized_batch['input_ids'].to(self.accelerator.device)
             )
         
         return out
@@ -139,17 +142,11 @@ class ConsolidatedModelClass:
 
             self.optimizer.zero_grad()
             
-            with torch.autocast(device_type='cuda',dtype=torch.float16):
-                
-                outputs = self.__call__(tokenized_batch)
-                loss = outputs.loss
-                self.scaler.scale(loss).backward()
+            outputs = self.__call__(tokenized_batch)
+            loss = outputs.loss
+            self.accelerator.backward(loss)
 
-                # loss.backward()
-
-            # self.optimizer.step()
-            self.scaler.step(self.optimizer)
-            self.scaler.update()
+            self.optimizer.step()
 
         else:
             
@@ -158,11 +155,11 @@ class ConsolidatedModelClass:
 
         return loss
 
-    def train_model(self,train_loader):
+    def train_model_epoch(self,train_loader):
 
         self.model.train()
 
-        # store losses in dict
+        # store losses
         epoch_loss = 0
 
         # iterate over dataloader
@@ -182,7 +179,7 @@ class ConsolidatedModelClass:
         # empty cache
         torch.cuda.empty_cache()
 
-    def evaluate_model(self,valid_loader):
+    def evaluate_model_epoch(self,val_loader):
 
         epoch_loss = 0
 
@@ -190,7 +187,7 @@ class ConsolidatedModelClass:
         self.model.eval() 
 
         # iterate over dataloader
-        for batch in tqdm(valid_loader):
+        for batch in tqdm(val_loader):
 
             with torch.no_grad():
 
@@ -199,7 +196,7 @@ class ConsolidatedModelClass:
                 epoch_loss += loss
 
         # log in central dict, with average train loss
-        self.losses['val_loss'].append(epoch_loss.item()/len(valid_loader))
+        self.losses['val_loss'].append(epoch_loss.item()/len(val_loader))
 
         # empty cache
         torch.cuda.empty_cache()
@@ -207,7 +204,9 @@ class ConsolidatedModelClass:
     # return changes to embeddings for bookkeeping
     def get_embedding_updates(self):
 
-        new_embeddings = self.model.transformer.wte.weight
+        self.init_embeddings = self.init_embeddings.to(self.accelerator.device)
+        new_embeddings = self.model.transformer.wte.weight.to(self.accelerator.device)
+        
         diff_embeddings = torch.norm(self.init_embeddings-new_embeddings).item()
 
         if new_embeddings.grad is not None:
@@ -216,3 +215,36 @@ class ConsolidatedModelClass:
             embeddings_gradient = 0
 
         return diff_embeddings,embeddings_gradient
+
+    # Train model
+    def train(self,train_loader,val_loader):
+
+        # prepare using accelerator method
+        self.model, self.optimizer, train_loader = self.accelerator.prepare(self.model,self.optimizer,train_loader)
+
+        for epoch in tqdm(range(self.args.num_epochs)):
+
+            self.train_model_epoch(train_loader)
+            self.evaluate_model_epoch(val_loader)
+
+            train_loss = self.losses['train_loss'][-1]
+            val_loss = self.losses['val_loss'][-1]
+
+            # ------------------------------- Learning Rate ------------------------------ #
+            lr = self.scheduler.get_last_lr()[0]
+
+            # ------------------- Get embedding updates for bookkeeping ------------------ #
+            diff_embeddings,embeddings_gradient = self.get_embedding_updates()
+
+            # ---------------------------------- Logging --------------------------------- #
+            if self.args.use_wandb:
+                print("Logging")
+                wandb.log({
+                    "train loss" : train_loss,
+                    "val loss" : val_loss,
+                    "learning rate" : lr,
+                    "diff_embeddings" : diff_embeddings,
+                    "grad_embeddings" : embeddings_gradient
+                },
+                step = epoch
+                )

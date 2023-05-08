@@ -31,7 +31,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_layers",default=6,type=int)
     parser.add_argument("--use_wandb",default=True,type=str_to_bool)
     parser.add_argument("--seed",default=42,type=int)
-    parser.add_argument("--wandb_project_name",default="gptembeddings")
+    parser.add_argument("--wandb_project_name",default="gptembeddings_with_monitoring")
     parser.add_argument("--num_workers",default=4,type=int)
     parser.add_argument("--run_name",default=None)
     parser.add_argument("--warmup_steps",default=100,type=int)
@@ -101,7 +101,6 @@ if __name__ == "__main__":
         tokenizer=tokenizer,
         scheduler=args.scheduler,
         args=args,
-        device=device,
     )
 
     # ------------------------- Store initial embeddings ------------------------- #
@@ -110,32 +109,7 @@ if __name__ == "__main__":
     # ---------------------------------------------------------------------------- #
     #                                 Training loop                                #
     # ---------------------------------------------------------------------------- #
-    for epoch in tqdm(range(args.num_epochs)):
-
-        Model.train_model()
-        Model.evaluate_model()
-
-        train_loss = Model.losses['train_loss'][-1]
-        val_loss = Model.losses['val_loss'][-1]
-
-        # ------------------------------- Learning Rate ------------------------------ #
-        lr = Model.scheduler.get_last_lr()[0]
-
-        # ------------------- Get embedding updates for bookkeeping ------------------ #
-        diff_embeddings,embeddings_gradient = Model.get_embedding_updates()
-
-        # ---------------------------------- Logging --------------------------------- #
-        if args.use_wandb:
-            print("Logging")
-            wandb.log({
-                "train loss" : train_loss,
-                "val loss" : val_loss,
-                "learning rate" : lr,
-                "diff_embeddings" : diff_embeddings,
-                "grad_embeddings" : embeddings_gradient
-            },
-            step = epoch
-            )
+    Model.train(train_loader,test_loader)
 
 
 ## 3 separate runs, with same seed
