@@ -100,6 +100,3 @@ def str_to_bool(str):
         return True
     else:
         raise ValueError("Input must be a boolean")
-
-def embedding_error(e1,e2):
-    

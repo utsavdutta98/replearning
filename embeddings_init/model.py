@@ -46,6 +46,8 @@ class ConsolidatedModelClass:
             'val_loss' : []
         }
 
+        self.scaler = torch.cuda.amp.GradScaler()
+
     def build_model(self,model_name,num_layers,use_pretrained_embeddings,freeze_pretrained_embeddings):
 
         if model_name == 'GPT2':
@@ -130,11 +132,18 @@ class ConsolidatedModelClass:
 
             self.optimizer.zero_grad()
             
-            outputs = self.__call__(tokenized_batch)
-            loss = outputs.loss
-            loss.backward()
+            with torch.autocast(device_type='cuda',dtype=torch.float16):
+                
+                outputs = self.__call__(tokenized_batch)
+                loss = outputs.loss
+                self.scaler.scale(loss).backward()
 
-            self.optimizer.step()
+                # loss.backward()
+
+            # self.optimizer.step()
+            self.scaler.step(self.optimizer)
+
+            self.scaler.update()
 
         else:
             

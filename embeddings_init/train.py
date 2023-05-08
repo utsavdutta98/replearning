@@ -20,15 +20,16 @@ def train_models(Model,train_loader,args):
 
         # compute loss for each model and log
         loss = Model.step(batch)
-        epoch_loss += loss.item()
+        epoch_loss += loss
 
     # take scheduler step
     if Model.scheduler_flag:
         Model.scheduler.step()
 
     # log in central dict, with average train loss
-    Model.losses['train_loss'].append(epoch_loss/len(train_loader))
+    Model.losses['train_loss'].append(epoch_loss.item()/len(train_loader))
 
+    # empty cache
     torch.cuda.empty_cache()
 
 def evaluate_models(Model,valid_loader,args):
@@ -46,9 +47,10 @@ def evaluate_models(Model,valid_loader,args):
 
             # compute loss for each model and log
             loss = Model.step(batch)
-            epoch_loss += loss.item()
+            epoch_loss += loss
 
     # log in central dict, with average train loss
-    Model.losses['val_loss'].append(epoch_loss/len(valid_loader))
+    Model.losses['val_loss'].append(epoch_loss.item()/len(valid_loader))
 
+    # empty cache
     torch.cuda.empty_cache()

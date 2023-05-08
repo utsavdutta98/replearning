@@ -9,7 +9,7 @@ import os
 import copy
 
 os.environ["WANDB_SILENT"] = "true" # suppress wandb outputs
-os.environ["CUDA_VISIBLE_DEVICES"] = "1" # set CUDA to device : 1
+# os.environ["CUDA_VISIBLE_DEVICES"] = "1" # set CUDA to device : 1
 
 # git token : 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
 
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     parser.add_argument("--use_wandb",default=True,type=str_to_bool)
     parser.add_argument("--seed",default=42,type=int)
     parser.add_argument("--wandb_project_name",default="gptembeddings")
-    parser.add_argument("--num_workers",default=16,type=int)
+    parser.add_argument("--num_workers",default=4,type=int)
     parser.add_argument("--run_name",default=None)
     parser.add_argument("--warmup_steps",default=100,type=int)
 
@@ -59,12 +59,13 @@ if __name__ == "__main__":
     
     print("Logging as run name:", run_name)
 
-    # Start wandb
-    run = wandb.init(
-        name=run_name,
-        project=args.wandb_project_name,
-        config=dict(vars(args).items())
-    )
+    if args.use_wandb:
+        # Start wandb
+        run = wandb.init(
+            name=run_name,
+            project=args.wandb_project_name,
+            config=dict(vars(args).items())
+        )
 
     # Only run if GPU is available
     assert torch.cuda.is_available(), "Cuda is not available"
@@ -117,26 +118,31 @@ if __name__ == "__main__":
         train_loss = Model.losses['train_loss'][-1]
         val_loss = Model.losses['val_loss'][-1]
 
-        # learning rate
-        lr = Model.scheduler.get_lr()
+        # ------------------------------- Learning Rate ------------------------------ #
+        lr = Model.scheduler.get_last_lr()[0]
 
-        # get norm of difference in embeddings
+        # ------------------------------ Embeddings Diff ----------------------------- #
         new_embeddings = Model.model.transformer.wte.weight
         diff_embeddings = torch.norm(init_embeddings-new_embeddings).item()
 
-        # grad of embeddings
-        embeddings_gradient = torch.norm(new_embeddings.grad).item()
+        # ---------------------------- Embeddings Gradient --------------------------- #
+        if new_embeddings.grad is not None:
+            embeddings_gradient = torch.norm(new_embeddings.grad).item()
+        else: 
+            embeddings_gradient = 0
 
-        wandb.log({
-            f"train loss" : train_loss,
-            f"val loss" : val_loss,
-            'learning rate' : lr,
-            "diff_embeddings":diff_embeddings,
-            "grad_embeddings":embeddings_gradient
-        },
-        
-        step = epoch
-        )
+        # ---------------------------------- Logging --------------------------------- #
+        if args.use_wandb:
+            print("Logging")
+            wandb.log({
+                "train loss" : train_loss,
+                "val loss" : val_loss,
+                "learning rate" : lr,
+                "diff_embeddings" : diff_embeddings,
+                "grad_embeddings" : embeddings_gradient
+            },
+            step = epoch
+            )
 
 
 ## 3 separate runs, with same seed
