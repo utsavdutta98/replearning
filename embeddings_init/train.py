@@ -1,56 +1,61 @@
-import tqdm
-from tqdm import tqdm
-import wandb
-import torch
+# ---------------------------------------------------------------------------- #
+#                                  DEPRECATED                                  #
+# ---------------------------------------------------------------------------- #
 
-"""
-Function to train dictionary of models and log
-"""
 
-def train_models(Model,train_loader,args):
+# import tqdm
+# from tqdm import tqdm
+# import wandb
+# import torch
 
-    # store losses in dict
-    epoch_loss = 0
+# """
+# Function to train dictionary of models and log
+# """
 
-    # set models to train
-    Model.train() 
+# def train_models(Model,train_loader,args):
 
-    # iterate over dataloader
-    for i,batch in tqdm(enumerate(train_loader)):
+#     # store losses in dict
+#     epoch_loss = 0
 
-        # compute loss for each model and log
-        loss = Model.step(batch)
-        epoch_loss += loss
+#     # set models to train
+#     Model.train() 
 
-    # take scheduler step
-    if Model.scheduler_flag:
-        Model.scheduler.step()
+#     # iterate over dataloader
+#     for i,batch in tqdm(enumerate(train_loader)):
 
-    # log in central dict, with average train loss
-    Model.losses['train_loss'].append(epoch_loss.item()/len(train_loader))
+#         # compute loss for each model and log
+#         loss = Model.step(batch)
+#         epoch_loss += loss
 
-    # empty cache
-    torch.cuda.empty_cache()
+#     # take scheduler step
+#     if Model.scheduler_flag:
+#         Model.scheduler.step()
 
-def evaluate_models(Model,valid_loader,args):
+#     # log in central dict, with average train loss
+#     Model.losses['train_loss'].append(epoch_loss.item()/len(train_loader))
 
-    # store losses in dict
-    epoch_loss = 0
+#     # empty cache
+#     torch.cuda.empty_cache()
 
-    # set models to train
-    Model.eval() 
+# def evaluate_models(Model,valid_loader,args):
 
-    # iterate over dataloader
-    for batch in tqdm(valid_loader):
+#     # store losses in dict
+#     epoch_loss = 0
 
-        with torch.no_grad():
+#     # set models to train
+#     Model.eval() 
 
-            # compute loss for each model and log
-            loss = Model.step(batch)
-            epoch_loss += loss
+#     # iterate over dataloader
+#     for batch in tqdm(valid_loader):
 
-    # log in central dict, with average train loss
-    Model.losses['val_loss'].append(epoch_loss.item()/len(valid_loader))
+#         with torch.no_grad():
 
-    # empty cache
-    torch.cuda.empty_cache()
+#             # compute loss for each model and log
+#             loss = Model.step(batch)
+#             epoch_loss += loss
+
+#     # log in central dict, with average train loss
+#     Model.losses['val_loss'].append(epoch_loss.item()/len(valid_loader))
+
+#     # empty cache
+#     torch.cuda.empty_cache()
