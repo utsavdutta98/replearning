@@ -112,8 +112,8 @@ if __name__ == "__main__":
     # ---------------------------------------------------------------------------- #
     for epoch in tqdm(range(args.num_epochs)):
 
-        train_models(Model,train_loader,args)
-        evaluate_models(Model,test_loader,args)
+        Model.train_model()
+        Model.evaluate_model()
 
         train_loss = Model.losses['train_loss'][-1]
         val_loss = Model.losses['val_loss'][-1]
@@ -121,15 +121,8 @@ if __name__ == "__main__":
         # ------------------------------- Learning Rate ------------------------------ #
         lr = Model.scheduler.get_last_lr()[0]
 
-        # ------------------------------ Embeddings Diff ----------------------------- #
-        new_embeddings = Model.model.transformer.wte.weight
-        diff_embeddings = torch.norm(init_embeddings-new_embeddings).item()
-
-        # ---------------------------- Embeddings Gradient --------------------------- #
-        if new_embeddings.grad is not None:
-            embeddings_gradient = torch.norm(new_embeddings.grad).item()
-        else: 
-            embeddings_gradient = 0
+        # ------------------- Get embedding updates for bookkeeping ------------------ #
+        diff_embeddings,embeddings_gradient = Model.get_embedding_updates()
 
         # ---------------------------------- Logging --------------------------------- #
         if args.use_wandb:
