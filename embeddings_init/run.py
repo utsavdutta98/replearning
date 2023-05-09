@@ -20,7 +20,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset_name",default='yelp_review_full')
     parser.add_argument("--model_name",default="GPT2")
     parser.add_argument("--optimizer",default="AdamW")
-    parser.add_argument("--lr",default=3e-4,type=float)
+    parser.add_argument("--max_lr",default=3e-4,type=float)
     parser.add_argument("--use_pretrained_embeddings",default=True,type=str_to_bool)
     parser.add_argument("--freeze_pretrained_embeddings",default=True,type=str_to_bool)
     parser.add_argument("--num_epochs",default=200,type=int)
@@ -32,9 +32,12 @@ if __name__ == "__main__":
     parser.add_argument("--use_wandb",default=True,type=str_to_bool)
     parser.add_argument("--seed",default=42,type=int)
     parser.add_argument("--wandb_project_name",default="gptembeddings_with_monitoring")
-    parser.add_argument("--num_workers",default=4,type=int)
+    parser.add_argument("--num_workers",default=8,type=int)
     parser.add_argument("--run_name",default=None)
     parser.add_argument("--warmup_steps",default=100,type=int)
+    parser.add_argument("--max_grad_norm",default=2.0,type=float)
+    parser.add_argument("--early_stopping",default=True,type=str_to_bool)
+    parser.add_argument("--patience",default=15,type=int)
 
     args = parser.parse_args()
 
@@ -51,7 +54,7 @@ if __name__ == "__main__":
         run_name = f"batch_size : {args.batch_size}, \
                     pretrain : {args.use_pretrained_embeddings}, \
                     freeze : {args.freeze_pretrained_embeddings}, \
-                    lr : {args.lr}, \
+                    max_lr : {args.max_lr}, \
                     seed : {args.seed}, \
                     dataset : {args.dataset_name}, \
                     num_epochs : {args.num_epochs}, \
@@ -97,14 +100,11 @@ if __name__ == "__main__":
         use_pretrained_embeddings=args.use_pretrained_embeddings,
         freeze_pretrained_embeddings=args.freeze_pretrained_embeddings,
         optimizer='AdamW',
-        lr=args.lr,
+        max_lr=args.max_lr,
         tokenizer=tokenizer,
         scheduler=args.scheduler,
         args=args,
     )
-
-    # ------------------------- Store initial embeddings ------------------------- #
-    init_embeddings = copy.deepcopy(Model.model.transformer.wte.weight)
 
     # ---------------------------------------------------------------------------- #
     #                                 Training loop                                #

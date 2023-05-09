@@ -18,7 +18,7 @@ class ConsolidatedModelClass:
                 use_pretrained_embeddings,
                 freeze_pretrained_embeddings,
                 optimizer,
-                lr,
+                max_lr,
                 tokenizer,
                 scheduler,
                 args
@@ -31,11 +31,12 @@ class ConsolidatedModelClass:
                                       use_pretrained_embeddings,
                                       freeze_pretrained_embeddings)
 
-        self.optimizer = self.build_optimizer(optimizer,lr)
+        # hard set optim lr = 1, can be improved, with a custom scheduler, but this works for now
+        self.optimizer = self.build_optimizer(optimizer,1)
 
         self.scheduler_flag = scheduler
         if self.scheduler_flag:
-            self.scheduler = self.build_scheduler(max_lr=lr,
+            self.scheduler = self.build_scheduler(max_lr=max_lr,
                                                   warmup_steps=args.warmup_steps,
                                                   total_steps=args.num_epochs)
         
@@ -56,6 +57,10 @@ class ConsolidatedModelClass:
         self.init_embeddings = copy.deepcopy(self.model.transformer.wte.weight)
 
         self.accelerator = Accelerator(mixed_precision='fp16')
+
+        if self.args.early_stopping:
+            self.best_val_loss = float('inf')
+            self.early_stopping_epochs = 0
 
     def build_model(self,model_name,num_layers,use_pretrained_embeddings,freeze_pretrained_embeddings):
 
@@ -146,7 +151,14 @@ class ConsolidatedModelClass:
             loss = outputs.loss
             self.accelerator.backward(loss)
 
+            if self.accelerator.sync_gradients:
+                self.accelerator.clip_grad_norm_(self.model.parameters(), self.args.max_grad_norm)
+
             self.optimizer.step()
+
+            # take scheduler step
+            if self.scheduler_flag:
+                self.scheduler.step()
 
         else:
             
@@ -168,10 +180,6 @@ class ConsolidatedModelClass:
             # compute loss for each model and log
             loss = self.step(batch)
             epoch_loss += loss
-
-        # take scheduler step
-        if self.scheduler_flag:
-            self.scheduler.step()
 
         # log in central dict, with average train loss
         self.losses['train_loss'].append(epoch_loss.item()/len(train_loader))
@@ -220,8 +228,11 @@ class ConsolidatedModelClass:
     def train(self,train_loader,val_loader):
 
         # prepare using accelerator method
-        self.model, self.optimizer, train_loader = self.accelerator.prepare(self.model,self.optimizer,train_loader)
+        self.model, self.optimizer, train_loader, self.scheduler = self.accelerator.prepare(self.model,self.optimizer,train_loader,self.scheduler)
 
+        # ---------------------------------------------------------------------------- #
+        #                                Begin Training                                #
+        # ---------------------------------------------------------------------------- #
         for epoch in tqdm(range(self.args.num_epochs)):
 
             self.train_model_epoch(train_loader)
@@ -248,3 +259,27 @@ class ConsolidatedModelClass:
                 },
                 step = epoch
                 )
+
+            # ------------------------------ Early Stopping ------------------------------ #
+            if self.args.early_stopping:
+                if self.early_stopping(val_loss):
+                    print("Stopping early as val_loss has not changed for num_patience epochs")
+                    break
+
+    # Functionality for early stopping
+    def early_stopping(self,val_loss):
+
+        if val_loss < self.best_val_loss:
+            self.best_val_loss = val_loss
+            self.early_stopping_epochs = 0
+        else:
+            self.early_stopping_epochs += 1
+
+        if self.early_stopping_epochs >= self.args.patience:
+            return True
+
+        return False
+            
+
+
+
